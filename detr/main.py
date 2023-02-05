@@ -336,17 +336,17 @@ def get_datasets(args):
 
 
 def set_dataset_path(args):
-    args.data_root = '/nobackup-slow/dataset/my_xfdu/'
-    args.bdd_root = '/nobackup-slow/dataset/my_xfdu/bdd-100k/bdd100k/images/100k/'
-    args.bdd_ann_root_train = '/nobackup-slow/dataset/my_xfdu/bdd-100k/bdd100k/train_bdd_converted.json'
-    args.bdd_ann_root_test = '/nobackup-slow/dataset/my_xfdu/bdd-100k/bdd100k/val_bdd_converted.json'
-    args.open_root = '/nobackup-slow/dataset/my_xfdu/OpenImages/ood_classes_rm_overlap/images'
-    args.open_ann_root = '/nobackup-slow/dataset/my_xfdu/OpenImages/ood_classes_rm_overlap/COCO-Format/val_coco_format.json'
-    args.coco_path = os.path.join(args.data_root, 'coco2017')
+    args.data_root = '/home/nazir/datasets/'
+    args.bdd_root = '/home/nazir/datasets/bdd100k/det/bdd100k_images_100k/bdd100k/images/100k/'
+    args.bdd_ann_root_train = '/home/nazir/datasets/bdd100k/det/train_bdd_converted.json'
+    args.bdd_ann_root_test = '/home/nazir/datasets/bdd100k/det/val_bdd_converted.json'
+    args.open_root = '/home/nazir/datasets/OpenImages/ood_classes_rm_overlap/images'
+    args.open_ann_root = '/home/nazir/datasets/OpenImages/ood_classes_rm_overlap/COCO-Format/val_coco_format.json'
+    args.coco_path = os.path.join(args.data_root, 'COCO')
     args.airbus_path = os.path.join(args.data_root, 'airbus-ship-detection')
     args.imagenet_path = os.path.join(args.data_root, 'ilsvrc')
     args.imagenet100_path = os.path.join(args.data_root, 'ilsvrc100')
-    args.voc_path = os.path.join(args.data_root, '')
+    args.voc_path = os.path.join(args.data_root, 'PascalVOC')
 
 
 if __name__ == '__main__':

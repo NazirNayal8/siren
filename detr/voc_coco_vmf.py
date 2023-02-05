@@ -20,6 +20,7 @@ parser = argparse.ArgumentParser(description='Evaluates an OOD Detector',
 parser.add_argument('--name', default=1., type=str)
 parser.add_argument('--use_trained_params', default=1, type=int)
 parser.add_argument('--pro_length', default=16, type=int)
+
 args = parser.parse_args()
 
 

@@ -22,7 +22,7 @@ from .transformer import build_transformer
 def build_model(args):
     if args.dataset_file == 'coco':
         if args.dataset == 'coco_ood_val' or args.dataset == 'openimages_ood_val':
-            if arg.eval_bdd:
+            if args.eval_bdd:
                 num_classes = 10
             else:
                 num_classes = 20
@@ -89,8 +89,8 @@ def build_model(args):
             args=args
         )
         matcher = build_def_matcher(args)
-
-        criterion = DefSetCriterion(num_classes, matcher, weight_dict, losses, focal_alpha=args.focal_alpha, args = args)
+        import copy
+        criterion = DefSetCriterion(num_classes, matcher, weight_dict, losses, focal_alpha=args.focal_alpha, args = copy.deepcopy(args))
         postprocessors = {'bbox': DefPostProcess()}
 
     elif args.model == 'detr':
